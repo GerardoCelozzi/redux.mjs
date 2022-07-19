@@ -1,0 +1,4 @@
+JavaScript ora ha una sintassi standardizzata esattamente per questo. 
+All'interno di un modulo, puoi utilizzare la parola chiave export per esportare qualsiasi cosa.
+ È possibile esportare un const, una funzione o qualsiasi altra associazione o dichiarazione di variabile. 
+Basta anteporre l'istruzione o la dichiarazione della variabile con export e
