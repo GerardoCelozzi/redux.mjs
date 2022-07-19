@@ -58,7 +58,8 @@ function rootReducer(state = initialState, action) {//aggiunto action
 }
 //3 CREIAMO LO STORE CHE PRENDE LA REFERENZA DEL REDUCER
 
-const store = createStore(rootReducer)
+const dev_Tool=window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+const store = createStore(rootReducer,dev_Tool)
 //abbiamo lo store quindi possiamo chiamare delle funzione
 //di dispatch o di subscribe
 
