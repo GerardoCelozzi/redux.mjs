@@ -37,17 +37,12 @@ function rootReducer(state = initialState, action) {//aggiunto action
     //quindi implementiamo la logica di cosa deve fare il reducer con lo stato
     switch(action.type){
         case BUTTON_CLICKED:
-            //chage state in modo non corretto andiamo a modificare lo stato iniziale
-            //nn facciamo un copia
-            state={...initialState}
-            state.buttonClicked='yes'
-  
-           
-            return state
+         //Object.assign retrocompatibile con i vecchi browser
+            return Object.assign({},initialState,{buttonClicked:'yes'})
       
         case MODAL_CLOSED:
-            state={...initialState}
-            state.modalClosed='yes'
+            state={...initialState,modalClosed:'yes'}
+           
        
             return state
         default:
